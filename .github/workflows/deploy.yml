@@ -1,0 +1,69 @@
+name: Deploy Cloud Resume
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-infrastructure:
+    name: Terraform Apply
+    runs-on: ubuntu-latest
+    
+    # FIX: We inject the secrets directly into this job's environment
+    # Terraform automatically looks for these specific variable names
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_REGION: ap-south-1
+      
+    defaults:
+      run:
+        working-directory: ./infrastructure
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Init
+        run: terraform init -upgrade
+
+      - name: Terraform Format Check
+        run: terraform fmt -check
+        continue-on-error: true 
+
+      - name: Terraform Plan
+        run: terraform plan -out=tfplan
+
+      - name: Terraform Apply
+        run: terraform apply -auto-approve tfplan 
+
+  deploy-frontend:
+    name: Sync S3 and Invalidate CloudFront
+    runs-on: ubuntu-latest
+    needs: deploy-infrastructure 
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # FIX: We pass the secrets directly to the AWS credential configurator
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-south-1
+
+      - name: Sync Frontend to S3
+        working-directory: ./frontend
+        run: aws s3 sync . s3://siddarth-resume-frontend-998877 --delete
+
+      - name: Invalidate CloudFront Cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DIST_ID }} \
+            --paths "/*"
