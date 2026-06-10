@@ -27,6 +27,8 @@ This project utilizes **GitHub Actions** for fully automated deployment. The pip
 1. **Infrastructure Provisioning:** Authenticates securely with AWS, runs `terraform fmt`, `terraform plan`, and `terraform apply` to dynamically provision or update cloud resources.
 2. **Frontend Synchronization:** Syncs the local `frontend/` directory to the S3 bucket and automatically creates a CloudFront invalidation to clear the global edge cache.
 
+Working URL - <a href="https://dti4lnjhf12l.cloudfront.net/">https://dti4lnjhf12l.cloudfront.net/</a>
+
 ## 📂 Repository Structure
 ```text
 .
