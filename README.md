@@ -1,12 +1,13 @@
 # AWS Cloud Resume Challenge - Serverless Architecture
 
 Welcome to my Cloud Resume Challenge project! This repository showcases the conceptualization, engineering, and deployment of my personal resume website as a highly available, scalable, and fully automated serverless application on AWS.
-The core objective of this project was to leverage modern cloud-native technologies to build a durable, performant, and secure platform, fully managing infrastructure-as-code using Terraform and demonstrating strong competency in AWS, IaC, CI/CD, and serverless architectures. A full-stack, serverless resume website built completely on AWS using Infrastructure as Code (IaC) and deployed via Continuous Integration/Continuous Deployment (CI/CD). This is my attempt at cloud resume challenge in AWS. 
+The core objective of this project was to leverage modern cloud-native technologies to build a durable, performant, and secure platform, fully managing infrastructure-as-code using Terraform and demonstrating strong competency in AWS, IaC, CI/CD, and serverless architectures. A full-stack, serverless resume website built completely on AWS using Infrastructure as Code (IaC) and deployed via Continuous Integration/Continuous Deployment (CI/CD).</br> This is my attempt at cloud resume challenge in AWS. </br>
 What is Cloud Resume Challenge? - <a href="https://cloudresumechallenge.dev/">The Cloud Resume Challenge</a> is a multiple-step resume project which helps build and demonstrate skills fundamental to pursuing a career in Cloud. 
 
 ## Architecture Diagram
-![Cloud Architecture](link-to-your-diagram.png)
-
+<p align="center">
+  <img src="/frontend/img/architecture-diagram.png" width="95%" alt="architecture-diagram" />
+</p>
 The architecture follows a standard serverless pattern:
 
 1.  **Frontend (Static S3 & CloudFront CDN):** Your personal resume page, decoupled from local assets, is securely hosted on an S3 bucket and globally delivered via CloudFront CDN. SSL/TLS certificates (ACM) are integrated for consistent security.
@@ -48,8 +49,9 @@ Working URL - <a href="https://dti4lnjhf12l.cloudfront.net/">Siddarth Kashyap - 
 
 
 ### CI/CD Pipeline (Automation)
-**[INSERT SCREENSHOT OR LINK TO GREEN PIPELINE RUN IF POSSIBLE]**
-
+<p align="center">
+  <img src="/frontend/img/github_actions.png" width="65%" alt="github_actions" />
+</p>
 
 ## Setup & Deployment Guide
 
