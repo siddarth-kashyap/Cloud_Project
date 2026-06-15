@@ -1,5 +1,7 @@
 # AWS Cloud Resume Challenge - Serverless Architecture
-
+<p align="center">
+  <img src="/frontend/img/P102.png" width="75%" alt="Repository Cover Picture" />
+</p>
 Welcome to my Cloud Resume Challenge project! This repository showcases the conceptualization, engineering, and deployment of my personal resume website as a highly available, scalable, and fully automated serverless application on AWS.
 The core objective of this project was to leverage modern cloud-native technologies to build a durable, performant, and secure platform, fully managing infrastructure-as-code using Terraform and demonstrating strong competency in AWS, IaC, CI/CD, and serverless architectures. A full-stack, serverless resume website built completely on AWS using Infrastructure as Code (IaC) and deployed via Continuous Integration/Continuous Deployment (CI/CD).</br> This is my attempt at cloud resume challenge in AWS. </br>
 What is Cloud Resume Challenge? - <a href="https://cloudresumechallenge.dev/">The Cloud Resume Challenge</a> is a multiple-step resume project which helps build and demonstrate skills fundamental to pursuing a career in Cloud. 
