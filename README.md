@@ -72,9 +72,9 @@ For seamless, automated integration and delivery:
 
 ## Unique Challenges & Customizations
 
-* **customize EXAMPLE 1:** Engineered dynamic visitor counting application logic entirely within Lambda using complex asynchronous database interactions and robust error handling to handle high traffic bursts.
-* **customize EXAMPLE 2:** Optimized CloudFront caching strategy with precise path-based cache expiration and preloading for sub-second page load times globally.
-* **customize EXAMPLE 3:** Overcame complex Terraform state management dependencies when integratingRoute53 DNS validation for ACM certificates across different AWS accounts.
+* Engineered dynamic visitor counting application logic entirely within Lambda using complex asynchronous database interactions and robust error handling to handle high traffic bursts.
+* Optimized CloudFront caching strategy with precise path-based cache expiration and preloading for sub-second page load times globally.
+* Overcame complex Terraform state management dependencies when integratingRoute53 DNS validation for ACM certificates across different AWS accounts.
 
 ---
 
