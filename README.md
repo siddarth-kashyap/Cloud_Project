@@ -12,7 +12,7 @@ What is Cloud Resume Challenge? - <a href="https://cloudresumechallenge.dev/">Th
 </p>
 The architecture follows a standard serverless pattern:
 
-1.  **Frontend (Static S3 & CloudFront CDN):** Your personal resume page, decoupled from local assets, is securely hosted on an S3 bucket and globally delivered via CloudFront CDN. SSL/TLS certificates (ACM) are integrated for consistent security.
+1.  **Frontend (Static S3 & CloudFront CDN):** It is securely hosted on an S3 bucket and globally delivered via CloudFront CDN. SSL/TLS certificates (ACM) are integrated for consistent security.
 2.  **API Entry (API Gateway):** A secure and scalable endpoint that async-triggers the backend logic.
 3.  **Compute (Lambda):** Serverless Go/Python/Node.js **customize with your backend language** functions process visitor interactions and manage database communication.
 4.  **Database (DynamoDB):** A scalable NoSQL database securely stores visitor metrics (e.g., page view counts).
