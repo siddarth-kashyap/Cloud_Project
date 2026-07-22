@@ -23,7 +23,7 @@ The architecture follows a standard serverless pattern:
 * **Bespoke Resume Website:** A dynamic personal resume with features like visitor tracking, demonstrating direct serverless backend interaction. **customize with specific resume features/metrics**
 * **100% Serverless Architecture (AWS):** No servers to manage, ensuring maximum scalability and cost-efficiency.
 * **Infrastructure-as-Code (IaC) with Terraform:** Complete infrastructure, from networking to database, defined programmatically for repeatability and consistency. **customize with mention of Terraform modules, complex dependencies, etc.**
-* **Automated CI/CD Pipeline:** Fully automated deployment bridge, ensuring seamless integration and delivery for both infrastructure changes and application code. **customize with your actual CI/CD tool**
+* **Automated CI/CD Pipeline:** Fully automated deployment bridge,  and delivery for both infrastructure changes and application code. **customize with your actual CI/CD tool**
 
 ## ⚙️ Technical Stack & Engineering Details
 - **Frontend:** HTML, CSS, JavaScript
