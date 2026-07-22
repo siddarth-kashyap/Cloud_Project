@@ -49,7 +49,7 @@ resource "aws_cloudfront_origin_access_control" "oac" {
   signing_protocol                  = "sigv4"
 }
 
-# 6. The CloudFront Distribution (CDN)
+# 6. The CloudFront Distribution (CDN)-
 resource "aws_cloudfront_distribution" "cdn" {
   enabled             = true
   is_ipv6_enabled     = true
