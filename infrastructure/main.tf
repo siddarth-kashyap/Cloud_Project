@@ -1,7 +1,7 @@
 # 1. Terraform Settings and Remote Backend
 terraform {
   backend "s3" {
-    # REPLACE with the exact bucket name you created in Step 1
+    # REPLACE with the exact bucket name you created in Step one
     bucket         = "resume-tf-state-sid-bucket-2026"
     key            = "infrastructure/terraform.tfstate"
     region         = "ap-south-1"
