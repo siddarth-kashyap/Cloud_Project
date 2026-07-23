@@ -4,7 +4,7 @@ output "cloudfront_url" {
 }
 
 output "s3_bucket_name" {
-  description = "The name of the S3 bucket holding the frontend files"
+  description = "The name of the S3 bucket holding the frontend file"
   value       = aws_s3_bucket.frontend_bucket.id
 }
 
