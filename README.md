@@ -35,7 +35,7 @@ The architecture follows a standard serverless pattern:
 
 ## 🌐 Cloud Services Utilized
 * **Amazon S3:** Hosts the static frontend assets. Public access is strictly blocked.
-* **Amazon CloudFront:** Global Content Delivery Network (CDN) enforcing HTTPS and utilizing Origin Access Control (OAC) to securely fetch assets from S3.
+* **Amazon CloudFront:** Global Content Delivery Network (CDN) enforcing HTTPS and utilising Origin Access Control (OAC) to securely fetch assets from S3.
 * **Amazon API Gateway:** HTTP API acting as the secure entry point for the backend, configured with strict CORS rules.
 * **AWS Lambda:** Serverless compute running Python (boto3) to execute the visitor counter logic.
 * **Amazon DynamoDB:** NoSQL database storing the atomic visitor count.
